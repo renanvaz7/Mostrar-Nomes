@@ -16,9 +16,9 @@ namespace MostrarNomes
 
             do
             {
-                Console.WriteLine("Digite um nome");
+                Console.WriteLine("Digite um nome ou sair");
                 entrada = Console.ReadLine();
-                Console.WriteLine("Digite o salário ou sair");
+                //Console.WriteLine("Digite o salário ou sair");
                 salario = Console.ReadLine();
 
                 if  (entrada == "sair") 
@@ -28,7 +28,7 @@ namespace MostrarNomes
                 else 
                 {
                     nomes.Add(entrada);
-                    nomes.Add(salario);
+                    //nomes.Add(salario);
                 }                  
             }while (true);
 
