@@ -13,13 +13,12 @@ namespace MostrarNomes
         {
             ArrayList nomes = new ArrayList();
             string entrada, salario;
+            int cont = 0;
 
             do
             {
                 Console.WriteLine("Digite um nome ou sair");
                 entrada = Console.ReadLine();
-                //Console.WriteLine("Digite o salário ou sair");
-                salario = Console.ReadLine();
 
                 if  (entrada == "sair") 
                 { 
@@ -27,14 +26,18 @@ namespace MostrarNomes
                 }
                 else 
                 {
+                    Console.WriteLine("Digite o salário ou sair");
+                    salario = Console.ReadLine();
+
                     nomes.Add(entrada);
-                    //nomes.Add(salario);
+                    nomes.Add(salario);
                 }                  
             }while (true);
 
             foreach (Object obj in nomes)
             {
-                Console.WriteLine("{0}", obj);
+                Console.WriteLine("{0} {1}",cont, obj);
+                cont++;
             }               
 
             Console.ReadKey();
